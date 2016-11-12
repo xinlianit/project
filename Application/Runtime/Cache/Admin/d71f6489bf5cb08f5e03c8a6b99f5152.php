@@ -166,9 +166,9 @@
 									<div class="table-search">
 										<form name="" action="" method="get">
 											<div class="form-group">
-												<label class="col-sm-3 control-label no-padding-right search-label" for="form-field-1">商户名称：</label>
-												<div class="col-sm-2 seach-input-col">
-													<input type="text" id="form-field-1" placeholder="支持模糊查询" class="input-sm seach-input">
+												<div class="seach-item">
+													<label class="col-sm-3 control-label no-padding-right search-label sea-label" for="form-field-1">商户名称：</label>
+													<input type="text" id="form-field-1" placeholder="支持模糊查询" class="input-sm seach-input value">
 												</div>
 												<span class="input-group-btn search-btn">
 													<button type="submit" class="btn btn-purple btn-sm">
@@ -427,17 +427,18 @@
 <div dialog-id="seachShop" class="hide">
 	<div tag-id="setup-1">
 		<div class="form-group">
-			<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 商户名称：</label>
-			<div class="col-sm-9">
-				<input type="text" name="hotel_name" placeholder="支持模糊搜索" class="col-xs-10 col-sm-9" >
-				
-				<button event-name="seachShop" class="btn btn-purple btn-sm">
+			<div class="seach-item" style="width:78%;margin-top:15px;">
+				<label class="col-sm-3 control-label no-padding-right search-label sea-label" style="height:30px;line-height:30px;width:25%!important;" for="form-field-1">商户名称：</label>
+				<input type="text" id="form-field-1" placeholder="支持模糊查询" class="input-sm seach-input value" style="width:70%!important;">
+			</div>
+			<span class="input-group-btn search-btn" style="display:inline-block;">
+				<button type="submit" class="btn btn-purple btn-sm">
 					搜索
 					<i class="icon-search icon-on-right bigger-110"></i>
 				</button>
-			</div>
+			</span>
 		</div>
-		<div class="form-group" style="padding-top:55px;">
+		<div class="form-group">
 			<table class="table table-striped table-bordered table-hover">
 				<thead>
 					<tr class="tr-center">

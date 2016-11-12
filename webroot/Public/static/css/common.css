@@ -58,7 +58,9 @@ body{}
 .sys-datetime{color:#FFF;padding:10px 10px;}
 
 /*搜索*/
-.seach-item{display:inline-block;}
+.seach-item{display:inline-block;width:20%;}
+.seach-item .sea-label{width:39%!important;}
+.seach-item .value{width:65%!important;}
 
 /*分页*/
 .page a,.page span{

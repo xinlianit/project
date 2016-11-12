@@ -361,5 +361,42 @@ seajs.use(['webupload', 'module/shop'],function(webupload, shop){
 			});
 		});
 		
+		//新增设备
+		$(document).on('click', '[event-name="addDevice"]', function(){
+			//打开窗口
+			$.common.openWindow({
+				id: 'add',
+				height: 500,
+				width: 700,
+				title: '设备新增',
+				confirm_title: '新增',
+			});
+		});
+		
+		//添加设备信息项目；
+		$(document).on('click', '[event-name="addDevItem"]', function(){
+			
+			var _this = $(this);
+			
+			var item = '<li>' +
+							'<div class="row-td td-tit"><span>设备地址</span></div> ' +
+							'<div class="row-td">' +
+								'<div class="col-sm-9">' +
+									'<input type="text" name="hotel_name" placeholder="输入设备地址" class="col-xs-10 col-sm-3" >' +
+								'</div>' +
+							'</div> ' +
+							'<div class="row-td td-tit"><span>摆放位置</span></div> ' +
+							'<div class="row-td" style="width:19%;">' +
+								'<div class="col-sm-9">' +
+									'<input type="text" name="hotel_name" placeholder="摆放位置" class="col-xs-10 col-sm-2" >' +
+								'</div>' +
+							'</div> ' +
+							'<a href="javascript:void(0);" event-name="removeFloorItem"><i class="icon-remove-circle" style="font-size:16px;"></i></a>' +
+						'</li>';
+			
+			_this.parents('.floor-info').eq(0).find('[tag-id="floor-item"]').append( item );
+			
+		});
+		
 	})
 });

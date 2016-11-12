@@ -2924,3 +2924,546 @@ SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0015s ]
 NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
 SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 OR ( `parent_id` = '440000' OR `parent_id` = '440300' ) ) AND `data_status` = 1  [ RunTime:0.0065s ]
 
+[ 2016-11-13T18:05:34+08:00 ] 127.0.0.1 /index.php/Public/getCity.html?province_id=440000&city_id=440300
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.032004s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.042006s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0015s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 OR ( `parent_id` = '440000' OR `parent_id` = '440300' ) ) AND `data_status` = 1  [ RunTime:0.0070s ]
+
+[ 2016-11-13T18:08:02+08:00 ] 127.0.0.1 /index.php/Public/getCity.html?province_id=440000&city_id=440300
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.059008s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.062008s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0015s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 OR ( `parent_id` = '440000' OR `parent_id` = '440300' ) ) AND `data_status` = 1  [ RunTime:0.0075s ]
+
+[ 2016-11-13T18:11:54+08:00 ] 127.0.0.1 /index.php/Public/getCity.html?province_id=440000&city_id=440300
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019002s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0020s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 OR ( `parent_id` = '440000' OR `parent_id` = '440300' ) ) AND `data_status` = 1  [ RunTime:0.0055s ]
+
+[ 2016-11-13T18:12:25+08:00 ] 127.0.0.1 /index.php/Public/getCity.html?province_id=440000&city_id=440300
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009501s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0015s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 OR ( `parent_id` = '440000' OR `parent_id` = '440300' ) ) AND `data_status` = 1  [ RunTime:0.0060s ]
+
+[ 2016-11-13T18:14:13+08:00 ] 127.0.0.1 /index.php/Public/getCity.html?province_id=440000&city_id=440300
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.043505s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.052507s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 OR ( `parent_id` = '440000' OR `parent_id` = '440300' ) ) AND `data_status` = 1  [ RunTime:0.0075s ]
+
+[ 2016-11-13T18:15:51+08:00 ] 127.0.0.1 /index.php/Public/getCity.html?province_id=440000&city_id=440300
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.017502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.030003s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0020s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 OR ( `parent_id` = '440000' OR `parent_id` = '440300' ) ) AND `data_status` = 1  [ RunTime:0.0075s ]
+
+[ 2016-11-13T18:16:17+08:00 ] 127.0.0.1 /index.php/Public/getCity.html?province_id=440000&city_id=440300
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008501s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0015s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 OR ( `parent_id` = '440000' OR `parent_id` = '440300' ) ) AND `data_status` = 1  [ RunTime:0.0085s ]
+
+[ 2016-11-13T18:17:00+08:00 ] 127.0.0.1 /index.php/Public/getCity.html?province_id=440000&city_id=440300
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.016502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.020503s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 OR ( `parent_id` = '440000' OR `parent_id` = '440300' ) ) AND `data_status` = 1  [ RunTime:0.0055s ]
+
+[ 2016-11-13T18:18:19+08:00 ] 127.0.0.1 /index.php/Public/getCity.html?province_id=440000&city_id=440300
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.043505s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.046506s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 OR ( `parent_id` = '440000' OR `parent_id` = '440300' ) ) AND `data_status` = 1  [ RunTime:0.0055s ]
+
+[ 2016-11-13T18:18:23+08:00 ] 127.0.0.1 /index.php/Public/getCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008501s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 ) AND `data_status` = 1  [ RunTime:0.0040s ]
+
+[ 2016-11-13T18:18:25+08:00 ] 127.0.0.1 /index.php/Public/getCity.html?province_id=440000&city_id=440300
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007501s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 OR ( `parent_id` = '440000' OR `parent_id` = '440300' ) ) AND `data_status` = 1  [ RunTime:0.0060s ]
+
+[ 2016-11-13T18:19:35+08:00 ] 127.0.0.1 /index.php/Public/getCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.018503s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.027004s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0020s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 ) AND `data_status` = 1  [ RunTime:0.0075s ]
+
+[ 2016-11-13T18:19:38+08:00 ] 127.0.0.1 /index.php/Public/getCity.html?province_id=440000&city_id=440300
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.023003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.026004s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0020s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 OR ( `parent_id` = '440000' OR `parent_id` = '440300' ) ) AND `data_status` = 1  [ RunTime:0.0060s ]
+
+[ 2016-11-13T18:19:39+08:00 ] 127.0.0.1 /index.php/Public/getCity.html?province_id=440000&city_id=440300
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009501s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0015s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 OR ( `parent_id` = '440000' OR `parent_id` = '440300' ) ) AND `data_status` = 1  [ RunTime:0.0075s ]
+
+[ 2016-11-13T18:20:48+08:00 ] 127.0.0.1 /index.php/Public/getCity.html?province_id=440000&city_id=440300
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014502s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0015s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 OR ( `parent_id` = '440000' OR `parent_id` = '440300' ) ) AND `data_status` = 1  [ RunTime:0.0060s ]
+
+[ 2016-11-13T18:20:53+08:00 ] 127.0.0.1 /index.php/Shop/device.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014002s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_auth_rule` [ RunTime:0.0030s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 0 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0020s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 8 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0020s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 9 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0015s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 13 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0025s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 18 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0035s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 19 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 20 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 21 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 22 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 23 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 24 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 25 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 29 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 32 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 33 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 34 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 35 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 36 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 1 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0015s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 2 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 37 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `name` = 'Admin/Shop/device' LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0015s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000500s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000500s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 14 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 19 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 20 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 22 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 23 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 26 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 27 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 28 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 30 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 31 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 36 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 6 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 38 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 39 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 40 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: list Z:\usr\local\www\project\Application\Runtime\Cache\Admin\bacdf1139b76035424934dd6b43a01ee.php 第 238 行.
+NOTIC: [8] Undefined variable: page Z:\usr\local\www\project\Application\Runtime\Cache\Admin\bacdf1139b76035424934dd6b43a01ee.php 第 266 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.189024s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.189024s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.014502s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.014502s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.014502s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015002s ]
+
+[ 2016-11-13T18:25:51+08:00 ] 127.0.0.1 /index.php/Public/getCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0015s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 ) AND `data_status` = 1  [ RunTime:0.0050s ]
+
+[ 2016-11-13T18:25:57+08:00 ] 127.0.0.1 /index.php/Public/getCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014002s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0015s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 ) AND `data_status` = 1  [ RunTime:0.0050s ]
+
+[ 2016-11-13T18:29:00+08:00 ] 127.0.0.1 /index.php/Public/getCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.029504s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.036005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 ) AND `data_status` = 1  [ RunTime:0.0070s ]
+
+[ 2016-11-13T18:34:11+08:00 ] 127.0.0.1 /index.php/Public/getCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.123516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.141518s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0015s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 ) AND `data_status` = 1  [ RunTime:0.0060s ]
+
+[ 2016-11-13T18:36:51+08:00 ] 127.0.0.1 /index.php/Public/getCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.036505s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.043506s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0015s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 ) AND `data_status` = 1  [ RunTime:0.0050s ]
+
+[ 2016-11-13T18:40:00+08:00 ] 127.0.0.1 /index.php/Public/getCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.028003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.030504s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0015s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 ) AND `data_status` = 1  [ RunTime:0.0050s ]
+
+[ 2016-11-13T18:42:36+08:00 ] 127.0.0.1 /index.php/Public/getCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.040005s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.044005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0015s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 ) AND `data_status` = 1  [ RunTime:0.0055s ]
+
+[ 2016-11-13T18:42:52+08:00 ] 127.0.0.1 /index.php/Public/getCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.020503s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.023503s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0015s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 ) AND `data_status` = 1  [ RunTime:0.0055s ]
+
+[ 2016-11-13T18:43:31+08:00 ] 127.0.0.1 /index.php/Public/getCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.016002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.030004s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 ) AND `data_status` = 1  [ RunTime:0.0045s ]
+
+[ 2016-11-13T18:43:41+08:00 ] 127.0.0.1 /index.php/Public/getCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.019003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.021003s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0025s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 ) AND `data_status` = 1  [ RunTime:0.0050s ]
+
+[ 2016-11-13T18:47:43+08:00 ] 127.0.0.1 /index.php/Public/getCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012501s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 ) AND `data_status` = 1  [ RunTime:0.0045s ]
+
+[ 2016-11-13T18:57:52+08:00 ] 127.0.0.1 /index.php/Public/getCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.061008s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.071509s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0015s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 ) AND `data_status` = 1  [ RunTime:0.0050s ]
+
+[ 2016-11-13T19:00:58+08:00 ] 127.0.0.1 /index.php/Public/getCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.027003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.029504s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0030s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 ) AND `data_status` = 1  [ RunTime:0.0065s ]
+
+[ 2016-11-13T19:03:59+08:00 ] 127.0.0.1 /index.php/Public/getCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.029004s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.034505s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0015s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 ) AND `data_status` = 1  [ RunTime:0.0050s ]
+
+[ 2016-11-13T19:04:51+08:00 ] 127.0.0.1 /index.php/Public/getCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006001s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0020s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 ) AND `data_status` = 1  [ RunTime:0.0045s ]
+
+[ 2016-11-13T19:06:29+08:00 ] 127.0.0.1 /index.php/Public/getCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.034004s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.037505s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0020s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 ) AND `data_status` = 1  [ RunTime:0.0050s ]
+
+[ 2016-11-13T19:08:55+08:00 ] 127.0.0.1 /index.php/Public/getCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.034504s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.043006s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0015s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 ) AND `data_status` = 1  [ RunTime:0.0095s ]
+
+[ 2016-11-13T19:09:39+08:00 ] 127.0.0.1 /index.php/Public/getCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011502s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0015s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 ) AND `data_status` = 1  [ RunTime:0.0050s ]
+
+[ 2016-11-13T19:10:23+08:00 ] 127.0.0.1 /index.php/Shop/device.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.172521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.212527s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SHOW COLUMNS FROM `pad_auth_rule` [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 0 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 8 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 9 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 13 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 18 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 19 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 20 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 21 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 22 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 23 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 24 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0015s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 25 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 29 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 32 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 33 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 34 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 35 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 36 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 1 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 2 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `pid` = 37 AND `status` = 1 AND `is_show` = 1 ORDER BY `sort` asc  [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `name` = 'Admin/Shop/device' LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT * FROM `pad_auth_rule` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000500s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 14 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 19 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 20 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 22 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 23 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 26 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 27 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 28 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 30 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 31 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 36 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 6 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 38 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 39 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 40 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) Z:\usr\local\www\project\Core\Library\Think\Db\Driver.class.php 第 1106 行.
+SQL: SELECT `name` FROM `pad_auth_rule` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: list Z:\usr\local\www\project\Application\Runtime\Cache\Admin\bacdf1139b76035424934dd6b43a01ee.php 第 238 行.
+NOTIC: [8] Undefined variable: page Z:\usr\local\www\project\Application\Runtime\Cache\Admin\bacdf1139b76035424934dd6b43a01ee.php 第 266 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:2.590329s ]
+INFO: [ view_parse ] --END-- [ RunTime:2.590329s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.126016s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.126516s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.322041s ]
+INFO: [ app_end ] --END-- [ RunTime:0.322041s ]
+
