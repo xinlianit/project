@@ -74,6 +74,6 @@ class ShopController extends CommonController {
      * 设备管理
      */
     public function device(){
-        $this->display('index');
+        $this->display();
     }
 }

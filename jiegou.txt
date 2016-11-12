@@ -1,0 +1,643 @@
+﻿DROP TABLE IF EXISTS `pad_admin_info`;
+CREATE TABLE `pad_admin_info` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '管理员ID',
+  `admin_account` char(15) NOT NULL COMMENT '管理员账号',
+  `admin_pass` char(32) NOT NULL COMMENT '管理员密码',
+  `admin_salt` char(10) NOT NULL COMMENT '密码盐值',
+  `admin_name` varchar(30) DEFAULT NULL COMMENT '管理员姓名',
+  `admin_mobile` varchar(11) DEFAULT NULL COMMENT '手机号码',
+  `role_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '角色ID',
+  `create_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
+  `update_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '更新时间',
+  `data_status` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '状态信息,1:正常,2:停用,99:删除',
+  PRIMARY KEY (`id`),
+  KEY `role_id` (`role_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='管理员信息表';
+
+DROP TABLE IF EXISTS `pad_admin_logs`;
+CREATE TABLE `pad_admin_logs` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '日志ID',
+  `admin_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '管理员ID',
+  `control_name` varchar(15) NOT NULL COMMENT '控制器名称',
+  `action_name` varchar(15) NOT NULL COMMENT '动作名称',
+  `ip_address` varchar(15) NOT NULL COMMENT '登录IP',
+  `log_type` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '日志类型',
+  `log_msg` varchar(255) NOT NULL COMMENT '日志内容',
+  `create_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
+  PRIMARY KEY (`id`),
+  KEY `admin_id` (`admin_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='管理员日志信息表';
+
+DROP TABLE IF EXISTS `pad_admin_roles`;
+CREATE TABLE `pad_admin_roles` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '角色ID',
+  `role_name` varchar(20) NOT NULL COMMENT '角色名称',
+  `role_powers` varchar(255) DEFAULT NULL COMMENT '角色权限集合,权限以逗号间隔',
+  `data_status` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '角色状态,1:有效,2:无效,99:删除',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='管理员角色信息表';
+
+DROP TABLE IF EXISTS `pad_advert_info`;
+CREATE TABLE `pad_advert_info` (
+  `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '广告ID',
+  `advert_name` varchar(30) NOT NULL COMMENT '广告名称',
+  `hotel_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '发布来源,0:平台发布,其余对应酒店ID',
+  `advertiser_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '广告主ID',
+  `advert_position` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '广告位置，1:首页广告',
+  `hotel_num` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '展示商户数',
+  `exposure_num` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '累计曝光数',
+  `release_time` varchar(23) DEFAULT NULL COMMENT '投放时间,展示用(例:2016.01.03 - 2016.01.10)',
+  `begin_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '投放开始时间',
+  `end_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '投放结束时间',
+  `weight` tinyint(2) unsigned NOT NULL DEFAULT '0' COMMENT '位置权重,权重系数0-5,数字越大广告位置越前',
+  `material_type` tinyint(2) unsigned NOT NULL DEFAULT '1' COMMENT '素材类型,1:图片,2:视频',
+  `source_path` varchar(255) DEFAULT NULL COMMENT '素材来源地址(主广告图/广告视频)',
+  `thumbnail` varchar(255) DEFAULT NULL COMMENT '广告缩略图',
+  `create_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
+  `update_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '更新时间',
+  `data_status` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '状态信息,1:有效,2:无效,99:删除',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='广告内容基础信息表';
+
+DROP TABLE IF EXISTS `pad_advert_release`;
+CREATE TABLE `pad_advert_release` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '发布ID',
+  `advert_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '广告ID',
+  `hotel_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '酒店ID',
+  `begin_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '投放开始时间',
+  `end_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '投放结束时间',
+  `exposure_num` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '曝光数',
+  `data_status` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '状态信息,1:有效,2:无效,99:删除',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='广告发布信息表';
+
+DROP TABLE IF EXISTS `pad_advertisers_info`;
+CREATE TABLE `pad_advertisers_info` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '广告主ID',
+  `advert_name` varchar(50) NOT NULL COMMENT '广告主名称',
+  `company_name` varchar(50) DEFAULT NULL COMMENT '公司名称',
+  `industry_desc` varchar(255) NOT NULL COMMENT '行业描述,以英文逗号间隔行业ID',
+  `contacts` varchar(15) DEFAULT NULL COMMENT '联系人',
+  `contact_way` varchar(20) DEFAULT NULL COMMENT '联系方式',
+  `advert_num` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '当前发布广告数',
+  `admin_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '管理员ID',
+  `create_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
+  `update_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '更新时间',
+  `data_status` tinyint(3) unsigned NOT NULL COMMENT '状态信息,1:有效,2:无效,99:删除',
+  PRIMARY KEY (`id`),
+  KEY `admin_id` (`admin_id`),
+  KEY `create_time` (`create_time`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='广告主基础信息表';
+
+DROP TABLE IF EXISTS `pad_auth_group`;
+CREATE TABLE `pad_auth_group` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '组ID',
+  `title` char(100) NOT NULL DEFAULT '' COMMENT '组名称',
+  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '状态：1：启用、0：停用',
+  `rules` char(80) NOT NULL DEFAULT '' COMMENT '用户组拥有的规则id， 多个规则","隔开',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='管理员组';
+
+DROP TABLE IF EXISTS `pad_auth_group_access`;
+CREATE TABLE `pad_auth_group_access` (
+  `uid` mediumint(8) unsigned NOT NULL COMMENT '管理员id',
+  `group_id` mediumint(8) unsigned NOT NULL COMMENT '管理员组ID',
+  UNIQUE KEY `uid_group_id` (`uid`,`group_id`),
+  KEY `uid` (`uid`),
+  KEY `group_id` (`group_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='用户组明细';
+
+DROP TABLE IF EXISTS `pad_auth_rule`;
+CREATE TABLE `pad_auth_rule` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '规则ID',
+  `pid` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT '上级ID',
+  `name` char(80) NOT NULL DEFAULT '' COMMENT '规则名称,规则唯一标识;如：Admin/Index/index',
+  `icon_name` varchar(20) NOT NULL COMMENT '图标名称',
+  `title` char(20) NOT NULL DEFAULT '' COMMENT '规则名称',
+  `type` tinyint(1) NOT NULL DEFAULT '1' COMMENT '类型：1:应用、2：控制器、3：方法  ',
+  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '状态：1：启用、0：停用',
+  `is_show` tinyint(1) NOT NULL DEFAULT '1' COMMENT '是否显示：1：显示 、0：不显示',
+  `sort` int(10) NOT NULL DEFAULT '0' COMMENT '排序',
+  `condition` char(100) NOT NULL DEFAULT '' COMMENT '规则附件条件,满足附加条件的规则,才认为是有效的规则',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name_index` (`name`) USING BTREE,
+  KEY `pid_status_show_index` (`pid`,`status`,`is_show`) USING BTREE,
+  KEY `pid` (`pid`)
+) ENGINE=MyISAM AUTO_INCREMENT=43 DEFAULT CHARSET=utf8 COMMENT='认证规则';
+
+DROP TABLE IF EXISTS `pad_building_info`;
+CREATE TABLE `pad_building_info` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '楼宇ID',
+  `hotel_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '酒店ID',
+  `floor_ids` varchar(255) DEFAULT NULL COMMENT '楼层ID集合,以|分割ID',
+  `floor_num` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '总楼层数',
+  `room_num` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '总房间数',
+  `data_status` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '楼宇状态, 1: 有效, 2: 无效, 99: 删除',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='楼宇基础信息表';
+
+DROP TABLE IF EXISTS `pad_business_district`;
+CREATE TABLE `pad_business_district` (
+  `hotel_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '酒店ID',
+  `trade_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '商圈ID'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='酒店所属商圈信息表';
+
+DROP TABLE IF EXISTS `pad_category_info`;
+CREATE TABLE `pad_category_info` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '分类ID',
+  `category_name` varchar(30) NOT NULL COMMENT '分类名称',
+  `category_desc` varchar(255) DEFAULT NULL COMMENT '分类描述',
+  `data_status` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '状态信息,1:有效,2:无效,99:删除',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='行业分类基础信息';
+
+DROP TABLE IF EXISTS `pad_city_info`;
+CREATE TABLE `pad_city_info` (
+  `id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '城市ID',
+  `city_name` char(50) NOT NULL COMMENT '城市名称',
+  `all_name` char(255) DEFAULT NULL COMMENT '城市全称',
+  `city_domain` char(30) DEFAULT NULL COMMENT '城市域名',
+  `first_letter` char(1) DEFAULT NULL COMMENT '名称首字母',
+  `city_jianpin` char(10) DEFAULT NULL COMMENT '城市简拼',
+  `city_qp` char(50) DEFAULT NULL COMMENT '城市全拼',
+  `circle_code` char(10) DEFAULT NULL COMMENT '城市编码',
+  `parent_id` int(10) unsigned DEFAULT '0' COMMENT '上级城市ID',
+  `city_level` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '城市级别',
+  `city_msg` char(255) DEFAULT NULL COMMENT '城市信息(备注)',
+  `create_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
+  `update_time` int(10) unsigned DEFAULT '0' COMMENT '更新时间',
+  `data_status` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '城市状态信息, 1:启用,2:停用,99:删除',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='城市商圈信息表';
+
+DROP TABLE IF EXISTS `pad_config_info`;
+CREATE TABLE `pad_config_info` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '配置ID',
+  `conf_name` varchar(30) NOT NULL COMMENT '配置名称',
+  `conf_code` char(10) NOT NULL COMMENT '配置编码',
+  `conf_value` varchar(255) DEFAULT NULL COMMENT '配置内容',
+  `data_status` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '状态信息 1:有效,2:无效,99:删除',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `conf_code_index` (`conf_code`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='派锋平台配置信息表';
+
+DROP TABLE IF EXISTS `pad_feedback_answer`;
+CREATE TABLE `pad_feedback_answer` (
+  `subject_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '问卷ID',
+  `option_id` int(10) unsigned DEFAULT '0' COMMENT '选项ID',
+  `answer_content` varchar(255) DEFAULT NULL COMMENT '答案内容',
+  `create_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
+  KEY `subject_id_index` (`subject_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='选择题答案信息';
+
+DROP TABLE IF EXISTS `pad_feedback_info`;
+CREATE TABLE `pad_feedback_info` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '反馈ID',
+  `hotel_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '酒店ID',
+  `topic_quantity` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '题目数量',
+  `create_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
+  `update_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '更新时间',
+  `data_status` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '状态信息 1:有效,2:无效,99:删除',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='服务意见反馈信息';
+
+DROP TABLE IF EXISTS `pad_feedback_option`;
+CREATE TABLE `pad_feedback_option` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '选项ID',
+  `subject_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '问卷ID',
+  `option_name` varchar(30) NOT NULL COMMENT '选项名称',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='反馈题目选项内容信息';
+
+DROP TABLE IF EXISTS `pad_feedback_subject`;
+CREATE TABLE `pad_feedback_subject` (
+  `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '问卷ID',
+  `hotel_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '酒店ID(当酒店ID为0时，则是平台添加内容)',
+  `title` varchar(200) NOT NULL COMMENT '问卷标题',
+  `subject_type` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '问卷类型 1:选择题,2:填空题',
+  `feedback_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '反馈ID',
+  `create_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
+  `update_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '更新时间',
+  `data_sort` int(10) unsigned DEFAULT '0' COMMENT '问卷排序',
+  `data_status` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '问卷状态 1:有效,2:无效,99:删除',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='反馈问卷定义信息';
+
+DROP TABLE IF EXISTS `pad_floor_info`;
+CREATE TABLE `pad_floor_info` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '楼层ID',
+  `floor_name` char(32) NOT NULL COMMENT '楼层名称',
+  `floor_code` char(10) DEFAULT NULL COMMENT '楼层编号',
+  `room_number` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '房间数量',
+  `hotel_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '酒店ID',
+  `build_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '楼宇ID',
+  `floor_remark` varchar(255) DEFAULT NULL COMMENT '楼层备注',
+  `data_status` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '关于楼层状态信息，1:启用,2:停用,99:删除',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='酒店楼层信息';
+
+DROP TABLE IF EXISTS `pad_goods_category`;
+CREATE TABLE `pad_goods_category` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '商品分类ID',
+  `category_name` varchar(30) NOT NULL COMMENT '分类名称',
+  `category_desc` varchar(255) DEFAULT NULL COMMENT '分类描述',
+  `data_sort` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '分类排序',
+  `data_status` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '分类状态,1:有效,2:无效,99:删除',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='商品分类信息表';
+
+DROP TABLE IF EXISTS `pad_goods_info`;
+CREATE TABLE `pad_goods_info` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '商品ID',
+  `goods_name` varchar(30) CHARACTER SET utf32 NOT NULL COMMENT '商品名称',
+  `goods_desc` varchar(255) DEFAULT NULL COMMENT '商品描述',
+  `goods_price` int(6) unsigned NOT NULL DEFAULT '0' COMMENT '商品售价,单位为分',
+  `goods_stock` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '商品库存',
+  `original_cost` varchar(9) NOT NULL DEFAULT '0.00' COMMENT '商品原价,展示用',
+  `goods_pic` varchar(255) DEFAULT NULL COMMENT '商品图片',
+  `cate_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '商品分类ID',
+  `data_status` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '商品状态,1:上架,2:下架,99:删除',
+  PRIMARY KEY (`id`),
+  KEY `cate_id` (`cate_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='商品基础信息表';
+
+DROP TABLE IF EXISTS `pad_goods_match`;
+CREATE TABLE `pad_goods_match` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '配对ID',
+  `hotel_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '酒店ID',
+  `goods_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '商品ID',
+  `match_code` varchar(12) NOT NULL COMMENT '配对编号',
+  `data_status` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '状态信息 1:有效,2:无效,99:删除',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='商品编号配对信息表';
+
+DROP TABLE IF EXISTS `pad_goods_promotion`;
+CREATE TABLE `pad_goods_promotion` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '促销ID',
+  `promotion_name` varchar(30) NOT NULL COMMENT '促销名称',
+  `data_sort` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '页面排列号',
+  `data_status` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '促销状态,1:有效,2:无效,99:删除',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品促销信息表';
+
+DROP TABLE IF EXISTS `pad_goods_shelves`;
+CREATE TABLE `pad_goods_shelves` (
+  `hotel_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '酒店ID',
+  `goods_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '商品ID',
+  `create_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
+  `update_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '更新时间',
+  `up_shelves` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '最后上架时间',
+  `down_shelves` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '最后下架时间',
+  `data_status` tinyint(2) unsigned NOT NULL DEFAULT '1' COMMENT '状态信息 1:上架,2:下架,99:删除',
+  UNIQUE KEY `hotel_goods_index` (`hotel_id`,`goods_id`) COMMENT '酒店上架商品索引',
+  KEY `hotel_id` (`hotel_id`) COMMENT '酒店ID索引',
+  KEY `goods_id` (`goods_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品上架信息表';
+
+DROP TABLE IF EXISTS `pad_hotel_info`;
+CREATE TABLE `pad_hotel_info` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '酒店ID',
+  `hotel_code` char(5) NOT NULL COMMENT '酒店编码',
+  `group_code` varchar(10) NOT NULL COMMENT '对应客户集团编码',
+  `customer_code` varchar(10) NOT NULL COMMENT '对应客户酒店编码',
+  `hotel_name` varchar(50) NOT NULL COMMENT '酒店名称',
+  `admin_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '管理员ID',
+  `interface_type` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '接口类型 1：西软XMS 2：西软X系列  3：西软SMART系列',
+  `interface_url` varchar(255) DEFAULT NULL COMMENT '接口地址',
+  `para1` varchar(100) DEFAULT NULL COMMENT '参数一, interface_type=1：CMMCODE',
+  `para2` varchar(100) DEFAULT NULL COMMENT '参数二, interface_type=1：PCCODE',
+  `para3` varchar(100) DEFAULT NULL COMMENT '参数三, interface_type=1：SECRET',
+  `para4` varchar(100) DEFAULT NULL COMMENT '参数四, interface_type=1：APPKEY',
+  `contacts` varchar(10) DEFAULT NULL COMMENT '联系人',
+  `contact_way` varchar(20) DEFAULT NULL COMMENT '联系方式',
+  `province_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '省份ID',
+  `city_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '城市ID',
+  `region_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '行政区ID',
+  `address` varchar(50) DEFAULT NULL COMMENT '商户地址',
+  `logo_path` varchar(255) DEFAULT NULL COMMENT '商户图片',
+  `adver_number` tinyint(1) NOT NULL DEFAULT '0' COMMENT '广告位数量,0为不开放,最大量为6',
+  `create_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
+  `update_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '更新时间',
+  `data_status` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '酒店状态, 1: 有效, 2: 无效, 99: 删除',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `hotel_code_index` (`hotel_code`) COMMENT '酒店编码索引'
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8 COMMENT='酒店基础信息表';
+
+DROP TABLE IF EXISTS `pad_hotel_service`;
+CREATE TABLE `pad_hotel_service` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '酒店服务ID',
+  `hotel_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '酒店ID',
+  `pic_num` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '图片数量',
+  `data_status` tinyint(2) unsigned NOT NULL DEFAULT '1' COMMENT '状态信息,1:有效,2:无效,99:删除',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='酒店服务指南基础信息';
+
+DROP TABLE IF EXISTS `pad_hotel_service_pic`;
+CREATE TABLE `pad_hotel_service_pic` (
+  `service_id` int(11) NOT NULL COMMENT '酒店服务ID',
+  `pic_path` varchar(255) NOT NULL COMMENT '图片地址'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='酒店服务指南图片信息';
+
+DROP TABLE IF EXISTS `pad_hotel_type`;
+CREATE TABLE `pad_hotel_type` (
+  `hotel_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '酒店ID',
+  `type_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '商户类型ID',
+  UNIQUE KEY `hotel_type_index` (`hotel_id`,`type_id`) COMMENT '酒店类型唯一索引',
+  KEY `hotel_id` (`hotel_id`),
+  KEY `type_id` (`type_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='酒店商户类型关系表';
+
+DROP TABLE IF EXISTS `pad_order_goods`;
+CREATE TABLE `pad_order_goods` (
+  `order_no` char(16) NOT NULL COMMENT '订单编号',
+  `goods_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '商品ID',
+  `goods_name` varchar(30) DEFAULT NULL COMMENT '商品名称',
+  `goods_cate` varchar(30) DEFAULT NULL COMMENT '商品分类',
+  `goods_thum` varchar(255) DEFAULT NULL COMMENT '商品缩略图',
+  `goods_price` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '商品单价 单位为分',
+  `goods_quantity` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '商品数量',
+  KEY `order_no_index` (`order_no`),
+  KEY `goods_id_index` (`goods_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='订单商品详情表';
+
+DROP TABLE IF EXISTS `pad_order_info`;
+CREATE TABLE `pad_order_info` (
+  `order_no` char(16) NOT NULL COMMENT '订单编号',
+  `goods_name` varchar(10) DEFAULT NULL COMMENT '商品信息',
+  `order_amount` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '订单金额 单位为分',
+  `sale_hotel` varchar(50) DEFAULT NULL COMMENT '销售商户',
+  `hotel_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '酒店ID',
+  `room_name` varchar(30) DEFAULT NULL COMMENT '销售房号',
+  `room_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '房间ID',
+  `device_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '设备ID',
+  `device_address` char(16) NOT NULL COMMENT '设备地址',
+  `only_code` char(32) NOT NULL COMMENT '入住客人唯一识别码',
+  `payment` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '支付方式 1:在线支付,2:货到付款,3:转房账',
+  `pay_status` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '支付状态 1:未支付,2:已支付',
+  `create_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
+  `update_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '更新时间',
+  `data_status` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '订单状态 1:待处理,2:配送中,3:订单取消,4:交易成功',
+  UNIQUE KEY `order_no_index` (`order_no`),
+  UNIQUE KEY `only_code_index` (`only_code`),
+  UNIQUE KEY `device_address_index` (`device_address`),
+  KEY `hotel_room_status_index` (`hotel_id`,`room_id`,`data_status`) USING BTREE,
+  KEY `device_id_index` (`device_id`),
+  KEY `hotel_room_index` (`hotel_id`,`room_id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='订单信息主表';
+
+DROP TABLE IF EXISTS `pad_order_logs`;
+CREATE TABLE `pad_order_logs` (
+  `order_no` char(16) NOT NULL COMMENT '订单编号',
+  `order_msg` varchar(255) DEFAULT NULL COMMENT '日志信息',
+  `create_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
+  KEY `order_no_index` (`order_no`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='订单操作日志记录表';
+
+DROP TABLE IF EXISTS `pad_phone_service`;
+CREATE TABLE `pad_phone_service` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '电话服务ID',
+  `hotel_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '酒店ID',
+  `call_name` varchar(10) NOT NULL COMMENT '呼叫名称',
+  `telephone` varchar(8) NOT NULL COMMENT '服务电话',
+  `icon_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '图标ID',
+  `data_sort` tinyint(2) unsigned DEFAULT '0' COMMENT '排列号',
+  `data_status` tinyint(2) unsigned NOT NULL DEFAULT '1' COMMENT '状态信息,1:有效,2:无效,99:删除',
+  PRIMARY KEY (`id`),
+  KEY `hotel_id` (`hotel_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='服务电话基础信息';
+
+DROP TABLE IF EXISTS `pad_query_room`;
+CREATE TABLE `pad_query_room` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '入住客房ID',
+  `hotel_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '酒店ID',
+  `build_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '楼宇ID',
+  `floor_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '楼层ID',
+  `room_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '房间ID',
+  `room_type` varchar(15) DEFAULT NULL COMMENT '房间类型',
+  `customer_name` varchar(20) DEFAULT NULL COMMENT '入住客人姓名',
+  `in_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '入住时间',
+  `out_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '离开时间',
+  `create_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
+  `data_status` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '房间状态 1:空房,2:有人,99:删除',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='客房信息查询总表';
+
+DROP TABLE IF EXISTS `pad_query_room_detail`;
+CREATE TABLE `pad_query_room_detail` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '客房查询明细ID',
+  `check_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '入住客房ID',
+  `guest_name` varchar(15) DEFAULT NULL COMMENT '客人名称',
+  `in_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '入住时间',
+  `out_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '离店时间',
+  `checkin_num` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '入住人数',
+  `checkin_cycle` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '入住周期',
+  `checking_record` varchar(255) DEFAULT NULL COMMENT '查房记录',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='客房信息查询明细';
+
+-- ----------------------------
+-- Records of pad_query_room_detail
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `pad_query_room_service`
+-- ----------------------------
+DROP TABLE IF EXISTS `pad_query_room_service`;
+CREATE TABLE `pad_query_room_service` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '服务详细ID',
+  `check_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '入住客房ID',
+  `service_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '服务ID',
+  `service_status` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '服务状态,1:待处理,2:已处理,3:服务取消',
+  `request_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '服务请求时间',
+  `remarks` varchar(255) DEFAULT NULL COMMENT '备注信息',
+  PRIMARY KEY (`id`),
+  KEY `service_id` (`service_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='客房服务查询信息';
+
+-- ----------------------------
+-- Records of pad_query_room_service
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `pad_resource`
+-- ----------------------------
+DROP TABLE IF EXISTS `pad_resource`;
+CREATE TABLE `pad_resource` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `res_path` varchar(100) NOT NULL COMMENT '资源存放路径',
+  `res_type` tinyint(2) NOT NULL DEFAULT '1' COMMENT '资源类型 1:图片 2:视频 3:文档 4:普通文件',
+  `res_postfix` varchar(10) NOT NULL DEFAULT '' COMMENT '资源后缀',
+  `res_size` int(10) NOT NULL DEFAULT '0' COMMENT '资源大小',
+  `res_mime` varchar(50) NOT NULL DEFAULT '' COMMENT 'MIME类型',
+  `res_md5val` char(32) NOT NULL COMMENT '资源md5签名',
+  `use_times` int(5) NOT NULL DEFAULT '0' COMMENT '应用使用次数',
+  `create_time` int(10) NOT NULL DEFAULT '0' COMMENT '创建时间',
+  `remark` varchar(100) DEFAULT NULL COMMENT '备注信息',
+  `data_status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '资源类型 1正式文件 2临时文件',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=279 DEFAULT CHARSET=utf8 COMMENT='系统资源信息表';
+
+DROP TABLE IF EXISTS `pad_room_device`;
+CREATE TABLE `pad_room_device` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '设备ID',
+  `room_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '房间ID',
+  `telephone` varchar(15) NOT NULL COMMENT '话机号码',
+  `device_address` char(16) NOT NULL COMMENT '设备地址',
+  `position` varchar(15) DEFAULT NULL COMMENT '摆放位置',
+  `device_version` varchar(15) DEFAULT NULL COMMENT '设备版本号',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `room_device_index` (`room_id`,`device_address`),
+  UNIQUE KEY `device_address` (`device_address`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='房间绑定设备地址信息';
+
+DROP TABLE IF EXISTS `pad_room_info`;
+CREATE TABLE `pad_room_info` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '房间ID',
+  `room_name` varchar(30) NOT NULL COMMENT '房间名称(房间号)',
+  `room_code` char(10) DEFAULT NULL COMMENT '房间编码',
+  `room_type` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '房间类型,1:客房,2:管家部,3:前台',
+  `room_phone` varchar(8) DEFAULT NULL COMMENT '房间电话号码',
+  `hotel_id` int(10) unsigned NOT NULL DEFAULT '1' COMMENT '酒店ID',
+  `build_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '楼宇ID',
+  `floor_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '楼层ID',
+  `only_code` char(32) DEFAULT NULL COMMENT '入住客人唯一识别码',
+  `in_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '入住时间',
+  `out_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '离开时间',
+  `room_status` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '实时房态信息,1:空房,2:有人',
+  `data_status` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '房间状态 1:有效,2:无效,99:删除',
+  PRIMARY KEY (`id`),
+  KEY `build_id_index` (`build_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='房间基础信息';
+
+DROP TABLE IF EXISTS `pad_room_service`;
+CREATE TABLE `pad_room_service` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '客房服务ID',
+  `hotel_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '酒店ID',
+  `two_service_ids` varchar(255) DEFAULT NULL COMMENT '二级服务ID集合,以逗号间隔',
+  `telephone` varchar(15) DEFAULT NULL COMMENT '电话号码',
+  `service_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '服务ID',
+  `service_detail_type` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '服务详情,1:文字,2:图片',
+  `service_content` varchar(255) DEFAULT NULL COMMENT '详情内容信息,当为图片时，保存图片路径',
+  `data_sort` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '排列号',
+  `data_status` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '状态信息,1:有效,2:无效,99:删除',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `hotel_service_index` (`hotel_id`,`service_id`) USING BTREE,
+  KEY `service_id` (`service_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='客房服务基础信息';
+
+DROP TABLE IF EXISTS `pad_service_call`;
+CREATE TABLE `pad_service_call` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '催叫ID',
+  `service_type` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '服务类型 1:客房催叫服务,2:迷你吧订单催叫服务',
+  `order_no` char(16) DEFAULT NULL COMMENT '订单编号',
+  `service_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '服务ID',
+  `goods_name` varchar(15) DEFAULT NULL COMMENT '服务名称(商品信息)',
+  `call_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '呼叫时间(记录最后一次)',
+  `data_status` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '处理状态 0:未处理,1:已接收处理',
+  PRIMARY KEY (`id`),
+  KEY `order_no_index` (`order_no`),
+  KEY `service_type_index` (`service_type`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='催叫服务信息';
+
+-- ----------------------------
+-- Records of pad_service_call
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `pad_service_icon`
+-- ----------------------------
+DROP TABLE IF EXISTS `pad_service_icon`;
+CREATE TABLE `pad_service_icon` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'LOGO风格ID',
+  `icon_category` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '图标分类,1: 服务电话,2:客房服务信息',
+  `res_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '资源ID',
+  `icon_name` varchar(10) NOT NULL COMMENT '图标名称',
+  `icon_path` varchar(255) NOT NULL COMMENT 'icon图标',
+  `icon_desc` varchar(255) DEFAULT NULL COMMENT '类型描述',
+  `data_status` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '状态信息,1:有效,2:无效,99:删除',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COMMENT='ICON图标基础信息';
+
+DROP TABLE IF EXISTS `pad_service_info`;
+CREATE TABLE `pad_service_info` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '服务ID',
+  `hotel_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '酒店ID,默认为0,表示系统服务',
+  `icon_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '图标ID',
+  `service_type` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '服务类型(消息类型) 0:未知服务,1:发送请求,2:呼叫电话',
+  `service_name` varchar(30) NOT NULL COMMENT '服务名称',
+  `service_code` char(10) NOT NULL COMMENT '服务编码',
+  `service_info` varchar(255) NOT NULL COMMENT '服务描述',
+  `data_status` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '服务状态,1:有效,2:无效,99:删除',
+  PRIMARY KEY (`id`),
+  KEY `hotel_id` (`hotel_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='功能服务信息表';
+
+DROP TABLE IF EXISTS `pad_service_two`;
+CREATE TABLE `pad_service_two` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '二级服务ID',
+  `service_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '服务ID',
+  `server_name` int(30) DEFAULT NULL COMMENT '二级服务名称',
+  PRIMARY KEY (`id`),
+  KEY `room_server_id` (`service_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='二级服务信息表';
+
+-- ----------------------------
+-- Records of pad_service_two
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `pad_staff_info`
+-- ----------------------------
+DROP TABLE IF EXISTS `pad_staff_info`;
+CREATE TABLE `pad_staff_info` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '员工ID',
+  `hotel_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '酒店ID',
+  `staff_name` varchar(15) DEFAULT NULL COMMENT '员工名称',
+  `staff_account` char(15) NOT NULL COMMENT '员工账号',
+  `staff_pwd` char(32) NOT NULL COMMENT '员工密码',
+  `staff_salt` char(10) NOT NULL COMMENT '密码盐值',
+  `account_type` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '账号类型(0:未知,1:管家部服务员,2:客房服务员)',
+  `create_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
+  `update_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '更新时间',
+  `data_status` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '状态信息 1:启用,2:停用,99:删除',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='酒店员工信息表';
+
+DROP TABLE IF EXISTS `pad_staff_logs`;
+CREATE TABLE `pad_staff_logs` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'APP操作日志ID',
+  `room_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '房间ID',
+  `device_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '设备ID',
+  `staff_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '员工ID',
+  `operate_type` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '操作类型(1:迷你吧入账,2:改房态,3:查房反馈)',
+  `create_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '记录时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='客房员工操作日志记录表';
+
+DROP TABLE IF EXISTS `pad_type_info`;
+CREATE TABLE `pad_type_info` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '商户类型ID',
+  `type_name` varchar(30) NOT NULL COMMENT '类型名称',
+  `type_class` tinyint(2) unsigned NOT NULL DEFAULT '1' COMMENT '类型分类,1:功能分类,2:星级分类,3:自定义',
+  `type_desc` varchar(255) DEFAULT NULL COMMENT '类型描述',
+  `data_status` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '类型状态,1:有效,2:无效,99:删除',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COMMENT='商户类型标签信息';
+
+DROP TABLE IF EXISTS `pad_wifi_service`;
+CREATE TABLE `pad_wifi_service` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'wifi服务ID',
+  `hotel_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '酒店ID',
+  `link_method` tinyint(1) NOT NULL DEFAULT '1' COMMENT '连接方式,1:账号密码,2:商户二维码,3:短信认证',
+  `wifi_account` varchar(50) DEFAULT NULL COMMENT 'wifi账号',
+  `wifi_password` varchar(16) DEFAULT NULL COMMENT 'wifi密码',
+  `qrcode_path` varchar(255) DEFAULT NULL COMMENT '二维码图片',
+  `data_status` tinyint(2) unsigned NOT NULL DEFAULT '1' COMMENT '状态信息,1:有效,2:无效,99:删除',
+  PRIMARY KEY (`id`),
+  KEY `hotel_id` (`hotel_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='wifi服务基础信息';
+
+
+
+
+

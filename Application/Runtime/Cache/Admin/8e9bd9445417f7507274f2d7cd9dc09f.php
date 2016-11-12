@@ -164,18 +164,20 @@
 
 								<div class="table-responsive">
 									<div class="table-search">
-										<div class="form-group">
-											<label class="col-sm-3 control-label no-padding-right search-label" for="form-field-1">商户名称：</label>
-											<div class="col-sm-2 seach-input-col">
-												<input type="text" id="form-field-1" placeholder="支持模糊查询" class="input-sm seach-input">
+										<form name="" action="" method="get">
+											<div class="form-group">
+												<label class="col-sm-3 control-label no-padding-right search-label" for="form-field-1">商户名称：</label>
+												<div class="col-sm-2 seach-input-col">
+													<input type="text" id="form-field-1" placeholder="支持模糊查询" class="input-sm seach-input">
+												</div>
+												<span class="input-group-btn search-btn">
+													<button type="submit" class="btn btn-purple btn-sm">
+														查询
+														<i class="icon-search icon-on-right bigger-110"></i>
+													</button>
+												</span>
 											</div>
-											<span class="input-group-btn search-btn">
-												<button type="button" class="btn btn-purple btn-sm">
-													查询
-													<i class="icon-search icon-on-right bigger-110"></i>
-												</button>
-											</span>
-										</div>
+										</form>
 									</div>
 									<div class="table-search">
 										<div class="form-group">
@@ -185,14 +187,14 @@
 													<i class="icon-plus smaller-75"></i>
 												</button>
 												<div class="separate-2"><i class="separate-flag"></i></div>
-												<button event-name="deleteRows" type="button" class="btn btn-sm btn-default">
+												<button event-name="delete" table-name="list" url="" message="确认要删选中的 x 条商户信息？|商户绑定的信息将会一同删除！" type="button" class="btn btn-sm btn-default">
 													删除
 													<i class="icon-remove"></i>
 												</button>
 											</span>
 										</div>
 									</div>
-									<table id="sample-table-2" class="table table-striped table-bordered table-hover">
+									<table table-id="list" class="table table-striped table-bordered table-hover">
 										<thead>
 											<tr>
 												<th class="center">
@@ -222,7 +224,7 @@
 											<?php if(is_array($page["list"])): $i = 0; $__LIST__ = $page["list"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?><tr>
 													<td class="center">
 														<label>
-															<input type="checkbox" class="ace" />
+															<input type="checkbox" tag-name="ids" value="<?php echo ($list["id"]); ?>" class="ace" />
 															<span class="lbl"></span>
 														</label>
 													</td>
@@ -258,7 +260,7 @@
 																<i class="icon-pencil bigger-130"></i>
 															</a>
 	
-															<a class="red" event-name="deleteRow" href="javascript:void(0);" title="删除">
+															<a class="red" event-name="delete" id-value="1" url="" message="确认要删除此商户信息？|商户绑定的信息将会一同删除！" href="javascript:void(0);" title="删除">
 																<i class="icon-trash bigger-130"></i>
 															</a>
 														</div>
@@ -448,7 +450,62 @@
 
 <!-- 查看面板 -->
 <div dialog-id="view" class="hide">
-	<h3>查看内容</h3>
+	<div class="base-info">
+		<h3>商户信息</h3>
+		<div class="info-row">
+			<div class="base-left">
+				<span class="profile-picture">
+					<img id="avatar" class="editable img-responsive editable-click editable-empty" src="/Public/plugins/assets/avatars/profile-pic.jpg"></img>
+				</span>
+				<div class="width-80 label label-info label-xlg arrowed-in arrowed-in-right img-tit">
+					<div class="inline position-relative">
+						<span class="white">商户ID：00156</span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="base-right">
+				<ul>
+					<li>商户名称：尚美水晶酒店</li>
+					<li>商户类型：商户型酒店；假日酒店；三星级酒店</li>
+					<li>商户地址：广东省深圳市南山区高新科技园XXXXXX</li>
+					<li>所属商圈：科技园</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div class="author-info">
+		<div class="base-info">
+			<h3>联系人信息</h3>
+			<div class="info-row">
+				<div class="base-right">
+					<ul>
+						<li>联系人：王先生</li>
+						<li>联系电话：186XXXX6699</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="base-info">
+			<h3>商家广告位</h3>
+			<div class="info-row">
+				<div class="base-right">
+					<ul class="adv-info">
+						<li class="adv-title">
+							<span class="adv-name">广告位名称</span>
+							<span class="adv-num">广告位数量</span>
+						</li>
+						<li class="adv-item">
+							<span class="adv-name">首页广告位</span>
+							<span class="adv-num">2 个</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <!-- 选择类型 -->
@@ -457,17 +514,6 @@
 		
 	</div>
 </div>
-
-<!-- 删除面板 -->
-<div dialog-id="delete" class="hide">
-	<h3>确定要删除吗？</h3>
-</div>
-
-<!-- 批量删除面板 -->
-<div dialog-id="deletes" class="hide">
-	<h3>确定要批量删除吗？</h3>
-</div>
-
 
 
 

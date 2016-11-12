@@ -18,3 +18,46 @@
 
 .hotel-intef{margin:20px 0px;}
 
+.base-info{overflow:auto;}
+.base-info h3{font-size:13px;font-weight:bold;margin:10px 0px;}
+.base-info .info-row{border:1px solid #CCCCCC;padding:10px;overflow:auto;}
+.base-info .info-row .base-left{display:inline-block;width:25%;}
+.base-info .info-row .base-right{display:inline-block;width:73%;margin-left:10px;float:right;}
+.base-info .info-row .base-right ul{list-style:none;margin:10px;}
+.base-info .info-row .base-right ul li{height:35px;line-height:35px;}
+.img-tit{margin-left:14px!important;}
+.author-info{overflow:auto;margin:10px 0px;}
+.author-info .base-info{width:49%;display:inline-block;}
+.author-info .base-info .info-row{height:112px;}
+.author-info .base-info .base-right{width:100%;}
+.author-info .adv-title{background:#CCC;}
+.author-info .adv-info span{display: inline-block;}
+.author-info .adv-info .adv-name{width:60%;text-align:center;}
+.author-info .adv-info .adv-num{width:36.2%;text-align:center;}
+
+/*楼层*/
+.floor-info{}
+.floor-info .row-td{display:inline-block;width:28%;}
+.floor-info .row-td .col-sm-9{width:100%;padding:0px;float:none;}
+.floor-info .row-td .col-sm-9 input{width:100%;margin:0px;float:none;}
+.floor-info .td-tit{width:12%;}
+.floor-info .td-last{width:5%;}
+.add-floor-btn{height: 30px;line-height: 30px;}
+.add-floor-btn i{font-size:16px;}
+.floor-info .item-list{}
+.floor-info .item-list ul{list-style:none;margin:0px}
+.floor-info .item-list ul li{margin:10px 0px}
+.hotet-sea-btn{
+	margin-left: -26px;
+    position: absolute;
+    font-size: 20px;
+    margin-top: 3px;
+}
+
+.floor-view{font-weight:bold;}
+.floor-view .head-left{display:inline-block;float:left;}
+.floor-view .head-right{display:inline-block;float:right;}
+
+
+
+

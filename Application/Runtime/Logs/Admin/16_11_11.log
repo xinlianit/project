@@ -4330,3 +4330,76 @@ INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
 SQL: SHOW COLUMNS FROM `pad_city_info` [ RunTime:0.0015s ]
 SQL: SELECT * FROM `pad_city_info` WHERE (  `city_level` = 1 OR ( `parent_id` = '440000' OR `parent_id` = '440300' ) ) AND `data_status` = 1  [ RunTime:0.0085s ]
 
+[ 2016-11-11T19:20:21+08:00 ] 192.168.1.2 /index.php/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.022757s ]
+
+[ 2016-11-11T19:22:09+08:00 ] 192.168.1.2 /index.php/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000924s ]
+
+[ 2016-11-11T19:22:18+08:00 ] 192.168.1.2 /index.php/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000984s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001569s ]
+
+[ 2016-11-11T19:26:29+08:00 ] 192.168.1.2 /index.php/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000531s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000942s ]
+
+[ 2016-11-11T21:12:22+08:00 ] 192.168.1.2 /index.php/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000553s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001017s ]
+
+[ 2016-11-11T21:14:04+08:00 ] 192.168.1.2 /index.php/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000808s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001277s ]
+
+[ 2016-11-11T21:15:34+08:00 ] 192.168.1.2 /index.php/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000898s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002051s ]
+NOTIC: [8] Undefined index: debug /usr/local/www/project/Core/Library/Think/Db/Driver.class.php 第 108 行.
+NOTIC: [8] Undefined offset: 0 /usr/local/www/project/Core/Library/Think/Db/Driver.class.php 第 113 行.
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) /usr/local/www/project/Core/Library/Think/Db/Driver.class.php 第 1106 行.
+NOTIC: [8] Undefined index: debug /usr/local/www/project/Core/Library/Think/Db/Driver.class.php 第 108 行.
+NOTIC: [8] Undefined offset: 0 /usr/local/www/project/Core/Library/Think/Db/Driver.class.php 第 113 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given /usr/local/www/project/Core/Library/Think/Model.class.php 第 1055 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given /usr/local/www/project/Core/Library/Think/Model.class.php 第 1055 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given /usr/local/www/project/Core/Library/Think/Model.class.php 第 1055 行.
+NOTIC: [8] Undefined index: auto /usr/local/www/project/Core/Library/Think/Model.class.php 第 1128 行.
+NOTIC: [8] Undefined offset: 1 /usr/local/www/project/Application/Admin/Controller/PublicController.class.php 第 39 行.
+
+[ 2016-11-11T21:15:42+08:00 ] 192.168.1.2 /index.php/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000527s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000951s ]
+NOTIC: [8] Undefined index: debug /usr/local/www/project/Core/Library/Think/Db/Driver.class.php 第 108 行.
+NOTIC: [8] Undefined offset: 0 /usr/local/www/project/Core/Library/Think/Db/Driver.class.php 第 113 行.
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) /usr/local/www/project/Core/Library/Think/Db/Driver.class.php 第 1106 行.
+NOTIC: [8] Undefined index: debug /usr/local/www/project/Core/Library/Think/Db/Driver.class.php 第 108 行.
+NOTIC: [8] Undefined offset: 0 /usr/local/www/project/Core/Library/Think/Db/Driver.class.php 第 113 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given /usr/local/www/project/Core/Library/Think/Model.class.php 第 1055 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given /usr/local/www/project/Core/Library/Think/Model.class.php 第 1055 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given /usr/local/www/project/Core/Library/Think/Model.class.php 第 1055 行.
+NOTIC: [8] Undefined index: auto /usr/local/www/project/Core/Library/Think/Model.class.php 第 1128 行.
+NOTIC: [8] Undefined offset: 1 /usr/local/www/project/Application/Admin/Controller/PublicController.class.php 第 39 行.
+
+[ 2016-11-11T21:16:27+08:00 ] 192.168.1.2 /index.php/Public/getCity.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000983s ]
+NOTIC: [8] Undefined index: debug /usr/local/www/project/Core/Library/Think/Db/Driver.class.php 第 108 行.
+NOTIC: [8] Undefined offset: 0 /usr/local/www/project/Core/Library/Think/Db/Driver.class.php 第 113 行.
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) /usr/local/www/project/Core/Library/Think/Db/Driver.class.php 第 1106 行.
+NOTIC: [8] Undefined index: debug /usr/local/www/project/Core/Library/Think/Db/Driver.class.php 第 108 行.
+NOTIC: [8] Undefined offset: 0 /usr/local/www/project/Core/Library/Think/Db/Driver.class.php 第 113 行.
+NOTIC: [2] mt_rand(): max(0) is smaller than min(1) /usr/local/www/project/Core/Library/Think/Db/Driver.class.php 第 1106 行.
+NOTIC: [8] Undefined index: debug /usr/local/www/project/Core/Library/Think/Db/Driver.class.php 第 108 行.
+NOTIC: [8] Undefined offset: 0 /usr/local/www/project/Core/Library/Think/Db/Driver.class.php 第 113 行.
+

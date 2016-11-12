@@ -12,9 +12,26 @@
 									<div class="table-search">
 										<form name="" action="" method="get">
 											<div class="form-group">
-												<label class="col-sm-3 control-label no-padding-right search-label" for="form-field-1">商户名称：</label>
-												<div class="col-sm-2 seach-input-col">
-													<input type="text" id="form-field-1" placeholder="支持模糊查询" class="input-sm seach-input">
+												<div class="seach-item">
+													<label class="col-sm-3 control-label no-padding-right search-label" for="form-field-1">商户名称：</label>
+													<div class="col-sm-2 seach-input-col">
+														<input type="text" id="form-field-1" placeholder="支持模糊查询" class="input-sm seach-input">
+													</div>
+												</div>
+												<div class="seach-item">
+													<label class="col-sm-3 control-label no-padding-right search-label" for="form-field-1">设备地址：</label>
+													<div class="col-sm-2 seach-input-col">
+														<input type="text" id="form-field-1" placeholder="支持模糊查询" class="input-sm seach-input">
+													</div>
+												</div>
+												<div class="seach-item">
+													<label class="col-sm-3 control-label no-padding-right search-label" for="form-field-1">房间类型：</label>
+													<div class="col-sm-2 seach-input-col">
+														<select class="form-control">
+															<option value="0">全部</option>
+															<option value="AL">客房</option>
+														</select>
+													</div>
 												</div>
 												<span class="input-group-btn search-btn">
 													<button type="submit" class="btn btn-purple btn-sm">
@@ -29,13 +46,18 @@
 										<div class="form-group">
 											<span class="input-group-btn search-btn">
 												<button event-name="addInfo" type="button" class="btn btn-sm btn-success">
-													新增商户
+													新增设备
 													<i class="icon-plus smaller-75"></i>
 												</button>
 												<div class="separate-2"><i class="separate-flag"></i></div>
 												<button event-name="delete" table-name="list" url="" message="确认要删选中的 x 条商户信息？|商户绑定的信息将会一同删除！" type="button" class="btn btn-sm btn-default">
 													删除
 													<i class="icon-remove"></i>
+												</button>
+												<div class="separate-2"><i class="separate-flag"></i></div>
+												<button event-name="addInfo" type="button" class="btn btn-sm btn-success">
+													批量新增设备
+													<i class="icon-plus smaller-75"></i>
 												</button>
 											</span>
 										</div>
@@ -50,22 +72,18 @@
 													</label>
 												</th>
 												
-												<th>商户ID</th>
 												<th>商户名称</th>
-												<th>商户类型</th>
-												<th>商户地址和商圈</th>
-												<th>联系人</th>
-												<th>联系电话</th>
-												<th>广告位数量</th>
-												<th>创建时间</th>
+												<th>楼层名称</th>
+												<th>房间号</th>
+												<th>房间类型</th>
+												<th>设备信息（设备地址、摆放位置）</th>
+												<th>房间电话号码</th>
 												<th class="hidden-480">操作</th>
 											</tr>
 										</thead>
 
 										<tbody>
 										
-											<include file="Layout:notlist" />
-											<volist name="page.list" id="list">
 												<tr>
 													<td class="center">
 														<label>
@@ -76,39 +94,14 @@
 													
 													
 	
-													<td>{$list.id}</td>
-													<td>{$list.hotel_name|_default}</td>
-													<td>{$list.id|get_fields_to_array="HotelType", "type_id", array('hotel_id'=>###)|get_fields_to_string="TypeInfo", "type_name", array('id'=>array('in',###))|_default}</td>
-													<td>
-														<neq name="list.province_id" value="0">
-														{$list.province_id|get_field="CityInfo","city_name",array('id'=>###)} 
-														</neq>
-														
-														<neq name="list.city_id" value="0">
-														{$list.city_id|get_field="CityInfo","city_name",array('id'=>###)} 
-														</neq>
-														
-														<neq name="list.region_id" value="0">
-														{$list.region_id|get_field="CityInfo","city_name",array('id'=>###)} 
-														</neq>
-														
-														{$list.address}
-														
-														<if condition="empty($list['province_id']) && empty($list['city_id']) && empty($list['region_id']) && empty($list['province_id'])">
-															{:C('FIELD_DEFAULT_VALUE')}
-														</if>
-														 
-													</td>
-													<td>{$list.contacts|_default}</td>
-													<td>{$list.contact_way|_default}</td>
-													<td>{$list.adver_number|_default}</td>
-													<td>{$list.create_time|date="Y-m-d H:i:s",###}</td>
+													<td>尚美水晶酒店</td>
+													<td>12楼</td>
+													<td>1202</td>
+													<td>客房</td>
+													<td>P1K1609100000005 床头</td>
+													<td>36501245</td>
 													<td>
 														<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
-															<a class="blue" event-name="viewInfo" href="javascript:void(0);" title="查看详情">
-																<i class="icon-zoom-in bigger-130"></i>
-															</a>
-	
 															<a class="green" event-name="editInfo" href="javascript:void(0);" title="编辑">
 																<i class="icon-pencil bigger-130"></i>
 															</a>
@@ -119,7 +112,6 @@
 														</div>
 													</td>
 												</tr>
-											</volist>
 											
 										</tbody>
 									</table>

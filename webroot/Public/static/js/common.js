@@ -15,6 +15,9 @@ define(function(require, exports ,module){
 					
 					//加载城市组件
 					$.common.cityComponent(city_url);
+					
+					//加载删除事件
+					$.common.deleteEvent();
 				},
 				/**
 				 * 获取系统当前时间
@@ -696,6 +699,83 @@ define(function(require, exports ,module){
 										break;
 								}
 								
+							}
+						});
+					});
+				},
+				
+				/**
+				 * 删除事件
+				 */
+				deleteEvent: function(){
+					//删除
+					$(document).on('click', '[event-name="delete"]', function(){
+						var _this 		= $(this);
+						//var flag 		= $.common.typeCheck(_this.attr('flag'), 'undefined', 'row');
+						var table_id 	= $.common.typeCheck(_this.attr('table-name'), 'undefined', false);
+						var _dialog		= $(document).find('[dialog-id="delete"]');
+						var message		= $.common.typeCheck(_this.attr('message'), 'undefined', false);
+						
+						var ids = $.common.typeCheck(_this.attr('id-value'), 'undefined', []);
+						
+						if( table_id != false ){
+							var cheked_ids = $(document).find('[table-id="'+ table_id +'"]').find('[tag-name="ids"]:checked');
+							
+							if(cheked_ids.length == 0){
+								$.common.openTips({
+									className: 'delete',
+									icon: 'icon-warning-sign',
+									message: '请选择要删除的选项',
+								});
+								setTimeout(function(){
+									$.common.closeTips('delete');
+								},3000);
+								return false;
+							}else{
+								$.each(cheked_ids, function(i, item){
+									//console.log($(item).val());
+									ids.push($(item).val());
+								});
+							}
+						}
+						
+						if( message != false ){
+							var msg_rows = message.split('|');
+							if( typeof(msg_rows) == 'object' ){
+								var first_row = msg_rows[0];
+								var x = first_row.indexOf('x');
+								if( x > -1 ){
+									msg_rows[0] = first_row.replace("x", cheked_ids.length);
+								}
+								
+								var msg_row = '';
+								$.each(msg_rows, function(i, item){
+									msg_row += '<h4>'+ item +'</h4>';
+								});
+								
+								if( msg_row == '' ) msg_row = '<h4>确定要删除吗？</h4><h4>删除后将不可恢复！</h4>';
+							}
+						}
+						
+						//删除面板
+						var delete_tag = '<div dialog-id="delete" class="wating hide">' +
+											'<div tag-id="row-info" class="message">' + msg_row + '</div>' +
+										'</div>';
+						
+						$(document).find('body').find('[dialog-id="delete"]').remove();
+						$(document).find('body').append( delete_tag );
+						
+						//打开窗口
+						$.common.openWindow({
+							id: 'delete',
+							height: 300,
+							width: 400,
+							title: $.common.typeCheck(_this.attr('dialog-title'), 'undefined', '删除提示'),
+							confirm_function: function(){
+								$.common.ajaxFormSubmit({
+									url: $.common.typeCheck(_this.attr('url'), 'undefined', ''),
+									data:{ids:ids}
+								});
 							}
 						});
 					});

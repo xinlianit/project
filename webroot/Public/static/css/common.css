@@ -40,8 +40,14 @@ body{}
 .province,.city,.area{min-width:100px;display:inline-block;max-width:158px;}
 .city{}
 .area{}
+.tr-center td,.tr-center th{text-align:center!important;}
 /*必须符号*/
 .must{color:red;}
+
+/*删除框*/
+.wating{padding:50px 30px!important;}
+.wating .message{margin:0px auto;}
+.wating .message h4{line-height:25px;}
 
 /* 头部  */
 .log small{height: 50px;line-height: 50px;}
@@ -50,6 +56,9 @@ body{}
 .top-nav .nav-item a,.top-nav .nav-item a:hover{background:none;font-size:13px;}
 .top-nav .nav-item i{font-size:18px!important;}
 .sys-datetime{color:#FFF;padding:10px 10px;}
+
+/*搜索*/
+.seach-item{display:inline-block;}
 
 /*分页*/
 .page a,.page span{

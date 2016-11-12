@@ -6,8 +6,8 @@ seajs.use(['webupload', 'module/shop'],function(webupload, shop){
 	//显示信息
 	$(function(){
 		
-		//添加
-		$('[event-name="addInfo"]').on('click' , function(){
+		//添加商户
+		$(document).on('click', '[event-name="addInfo"]', function(){
 			
 			//还原表单第一步
 			$(document).find('[tag-id="setup-1"]').removeClass('hide');
@@ -89,6 +89,7 @@ seajs.use(['webupload', 'module/shop'],function(webupload, shop){
 					$(document).find('.custom-next').removeClass('hide');
 				},
 				confirm_class: 'custom-confirm hide',
+				confirm_title: '新增',
 				confirm_function: function(){
 					//添加商户
 					shop.addShop('add');
@@ -269,31 +270,96 @@ seajs.use(['webupload', 'module/shop'],function(webupload, shop){
 			
 		})
 		
-		//查看详情
-		$('[event-name="viewInfo"]').on('click' , function(){
+		//查看商户详情
+		$(document).on('click', '[event-name="viewInfo"]', function(){
 			//打开窗口
 			$.common.openWindow({
-				id: 'dialog-confirm',
-				height: 300,
+				id: 'view',
+				height: 540,
 				width: 600,
 				title: '商户详情',
+				enable_confirm: false,
+				cancel_title: '关闭',
 			});
-			//alert("查看详情");
 		});
 		
-		//编辑
-		$('[event-name="editInfo"]').on('click' , function(){
-			alert("编辑");
+		//编辑商户
+		$(document).on('click', '[event-name="editInfo"]', function(){
+			//alert("编辑");
 		});
 		
-		//删除
-		$('[event-name="deleteRow"]').on('click' , function(){
-			alert("删除");
+		//添加楼层
+		$(document).on('click', '[event-name="addFloor"]', function(){
+			//打开窗口
+			$.common.openWindow({
+				id: 'addFloor',
+				height: 500,
+				width: 700,
+				title: '楼层信息新增',
+				confirm_title: '新增',
+			});
 		});
 		
-		//批量删除
-		$('[event-name="deleteRows"]').on('click' , function(){
-			alert("批量删除");
+		//打开搜索楼层
+		$(document).on('click', '[event-name="openSeach"]', function(){
+			//打开窗口
+			$.common.openWindow({
+				id: 'seachShop',
+				height: 500,
+				width: 700,
+				title: '商户搜索',
+			});
 		});
+		
+		//搜索楼层
+		$(document).on('click', '[event-name="seachShop"]', function(){
+			alert("搜索楼层");
+		});
+		
+		//移除楼层信息
+		$(document).on('click', '[event-name="removeFloorItem"]', function(){
+			var _this = $(this);
+			_this.parents('li').eq(0).remove();
+		});
+		
+		//添加楼层信息；
+		$(document).on('click', '[event-name="addFloorItem"]', function(){
+			
+			var _this = $(this);
+			
+			var item = '<li>' +
+							'<div class="row-td td-tit"><span>楼层名称</span></div> ' +
+							'<div class="row-td">' +
+								'<div class="col-sm-9">' +
+									'<input type="text" name="hotel_name" placeholder="输入楼层名称" class="col-xs-10 col-sm-3" >' +
+								'</div>' +
+							'</div> ' +
+							'<div class="row-td td-tit"><span>房间数量</span></div> ' +
+							'<div class="row-td" style="width:15%;">' +
+								'<div class="col-sm-9">' +
+									'<input type="text" name="hotel_name" placeholder="输入数量" class="col-xs-10 col-sm-2" >' +
+								'</div>' +
+							'</div> ' +
+							'<div class="row-td td-last"><span>间 </span></div>' +
+							'<a href="javascript:void(0);" event-name="removeFloorItem"><i class="icon-remove-circle" style="font-size:16px;"></i></a>' +
+						'</li>';
+			
+			_this.parents('.floor-info').eq(0).find('[tag-id="floor-item"]').append( item );
+			
+		});
+		
+		//查看楼层
+		$(document).on('click', '[event-name="viewFloor"]', function(){
+			//打开窗口
+			$.common.openWindow({
+				id: 'viewFloor',
+				height: 500,
+				width: 700,
+				title: '楼层信息详情',
+				enable_confirm: false,
+				cancel_title: '关闭',
+			});
+		});
+		
 	})
 });

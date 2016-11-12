@@ -166,9 +166,26 @@
 									<div class="table-search">
 										<form name="" action="" method="get">
 											<div class="form-group">
-												<label class="col-sm-3 control-label no-padding-right search-label" for="form-field-1">商户名称：</label>
-												<div class="col-sm-2 seach-input-col">
-													<input type="text" id="form-field-1" placeholder="支持模糊查询" class="input-sm seach-input">
+												<div class="seach-item">
+													<label class="col-sm-3 control-label no-padding-right search-label" for="form-field-1">商户名称：</label>
+													<div class="col-sm-2 seach-input-col">
+														<input type="text" id="form-field-1" placeholder="支持模糊查询" class="input-sm seach-input">
+													</div>
+												</div>
+												<div class="seach-item">
+													<label class="col-sm-3 control-label no-padding-right search-label" for="form-field-1">设备地址：</label>
+													<div class="col-sm-2 seach-input-col">
+														<input type="text" id="form-field-1" placeholder="支持模糊查询" class="input-sm seach-input">
+													</div>
+												</div>
+												<div class="seach-item">
+													<label class="col-sm-3 control-label no-padding-right search-label" for="form-field-1">房间类型：</label>
+													<div class="col-sm-2 seach-input-col">
+														<select class="form-control">
+															<option value="0">全部</option>
+															<option value="AL">客房</option>
+														</select>
+													</div>
 												</div>
 												<span class="input-group-btn search-btn">
 													<button type="submit" class="btn btn-purple btn-sm">
@@ -182,14 +199,19 @@
 									<div class="table-search">
 										<div class="form-group">
 											<span class="input-group-btn search-btn">
-												<button event-name="addFloor" type="button" class="btn btn-sm btn-success">
-													新增楼层信息
+												<button event-name="addInfo" type="button" class="btn btn-sm btn-success">
+													新增设备
 													<i class="icon-plus smaller-75"></i>
 												</button>
 												<div class="separate-2"><i class="separate-flag"></i></div>
-												<button event-name="delete" table-name="list" url="" message="确认要删选中的  x 条楼层信息？|删除后信息不可恢复！" type="button" class="btn btn-sm btn-default">
+												<button event-name="delete" table-name="list" url="" message="确认要删选中的 x 条商户信息？|商户绑定的信息将会一同删除！" type="button" class="btn btn-sm btn-default">
 													删除
 													<i class="icon-remove"></i>
+												</button>
+												<div class="separate-2"><i class="separate-flag"></i></div>
+												<button event-name="addInfo" type="button" class="btn btn-sm btn-success">
+													批量新增设备
+													<i class="icon-plus smaller-75"></i>
 												</button>
 											</span>
 										</div>
@@ -204,11 +226,12 @@
 													</label>
 												</th>
 												
-												<th>商户ID</th>
 												<th>商户名称</th>
 												<th>楼层名称</th>
-												<th>总楼层数</th>
-												<th>总房间数</th>
+												<th>房间号</th>
+												<th>房间类型</th>
+												<th>设备信息（设备地址、摆放位置）</th>
+												<th>房间电话号码</th>
 												<th class="hidden-480">操作</th>
 											</tr>
 										</thead>
@@ -218,87 +241,26 @@
 												<tr>
 													<td class="center">
 														<label>
-															<input tag-name="ids" type="checkbox" value="1" class="ace" />
+															<input type="checkbox" tag-name="ids" value="<?php echo ($list["id"]); ?>" class="ace" />
 															<span class="lbl"></span>
 														</label>
 													</td>
 													
-													<td>1</td>
-													<td>尚美水晶酒店</td>
-													<td>3楼；7楼；8楼</td>
-													<td>3</td>
-													<td>68</td>
-													<td>
-														<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
-															<a class="blue" event-name="viewFloor" href="javascript:void(0);" title="查看详情">
-																<i class="icon-zoom-in bigger-130"></i>
-															</a>
-	
-															<a class="green" event-name="editInfo" href="javascript:void(0);" title="编辑">
-																<i class="icon-pencil bigger-130"></i>
-															</a>
-	
-															<a class="red" event-name="delete" id-value="1" url="" message="确认要删除此楼层信息？|删除后信息不可恢复！" href="javascript:void(0);" title="删除">
-																<i class="icon-trash bigger-130"></i>
-															</a>
-														</div>
-													</td>
-												</tr>
-												
-												<tr>
-													<td class="center">
-														<label>
-															<input tag-name="ids" type="checkbox" value="2" class="ace" />
-															<span class="lbl"></span>
-														</label>
-													</td>
 													
-													<td>2</td>
+	
 													<td>尚美水晶酒店</td>
-													<td>3楼；7楼；8楼</td>
-													<td>3</td>
-													<td>68</td>
+													<td>12楼</td>
+													<td>1202</td>
+													<td>客房</td>
+													<td>P1K1609100000005 床头</td>
+													<td>36501245</td>
 													<td>
 														<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
-															<a class="blue" event-name="viewFloor" href="javascript:void(0);" title="查看详情">
-																<i class="icon-zoom-in bigger-130"></i>
-															</a>
-	
 															<a class="green" event-name="editInfo" href="javascript:void(0);" title="编辑">
 																<i class="icon-pencil bigger-130"></i>
 															</a>
 	
-															<a class="red" event-name="delete" id-value="2" message="确认要删除此楼层信息？|删除后信息不可恢复！" href="javascript:void(0);" title="删除">
-																<i class="icon-trash bigger-130"></i>
-															</a>
-														</div>
-													</td>
-												</tr>
-												
-												<tr>
-													<td class="center">
-														<label>
-															<input tag-name="ids" type="checkbox" value="3" class="ace" />
-															<span class="lbl"></span>
-														</label>
-													</td>
-													
-													<td>3</td>
-													<td>尚美水晶酒店</td>
-													<td>3楼；7楼；8楼</td>
-													<td>3</td>
-													<td>68</td>
-													<td>
-														<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
-															<a class="blue" event-name="viewFloor" href="javascript:void(0);" title="查看详情">
-																<i class="icon-zoom-in bigger-130"></i>
-															</a>
-	
-															<a class="green" event-name="editInfo" href="javascript:void(0);" title="编辑">
-																<i class="icon-pencil bigger-130"></i>
-															</a>
-	
-															<a class="red" event-name="delete" id-value="3" message="确认要删除此楼层信息？|删除后信息不可恢复！" href="javascript:void(0);" title="删除">
+															<a class="red" event-name="delete" id-value="1" url="" message="确认要删除此商户信息？|商户绑定的信息将会一同删除！" href="javascript:void(0);" title="删除">
 																<i class="icon-trash bigger-130"></i>
 															</a>
 														</div>
@@ -342,197 +304,216 @@
 
 
 <!-- 添加面板 -->
-<div dialog-id="addFloor" class="hide">
+<div dialog-id="add" class="hide">
+
 	<form class="form-horizontal" role="form" form-id="add" action="<?php echo U('Shop/add');?>" method="post">
 		<div tag-id="setup-1">
 			<div class="form-group">
 				<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 商户名称：<span class="must">*</span></label>
 				<div class="col-sm-9">
-					<input type="text" name="hotel_name" disabled="disabled" placeholder="商户名称" class="col-xs-10 col-sm-9" >
-					<a href="javascript:void(0);" event-name="openSeach"><i class="icon-search hotet-sea-btn"></i></a>
+					<input type="text" name="hotel_name" placeholder="输入商户名称" class="col-xs-10 col-sm-8" >
 				</div>
 			</div>
 			<div class="form-group">
-				<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 楼层信息：<span class="must">*</span></label>
-				<div class="col-sm-9 floor-info">
-					<div class="row-td td-tit"><span>楼层名称</span></div>
-					<div class="row-td">
-						<div class="col-sm-9">
-							<input type="text" name="hotel_name" placeholder="输入楼层名称" class="col-xs-10 col-sm-3" >
-						</div>
+				<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 商户类型：<span class="must">*</span></label>
+				<div class="col-sm-9">
+					<div class="shop-type" tag-id="checked-type">
+						请选择类型
 					</div>
-					<div class="row-td td-tit"><span>房间数量 </span></div>
-					<div class="row-td" style="width:15%;">
-						<div class="col-sm-9">
-							<input type="text" name="hotel_name" placeholder="输入数量" class="col-xs-10 col-sm-2" >
-						</div>
-					</div>
-					<div class="row-td td-last"><span>间 </span></div>
-					<div class="item-list">
-						<ul tag-id="floor-item">
-							
-						</ul>
-					</div>
-					<a event-name="addFloorItem" href="javascript:void(0);" class="add-floor-btn">
-						<i class="icon-plus-sign"></i> 添加楼层
-					</a>
+					<button event-name="add-type" url="<?php echo U('Shop/hotelType');?>" type="button" class="btn btn-sm btn-success add-shop-type">
+						添加类型
+					</button>
+					<input type="hidden" name="hotel_type">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 联系人： </label>
+	
+				<div class="col-sm-9">
+					<input type="text" name="contacts" id="form-field-2" placeholder="输入联系人" class="col-xs-10 col-sm-6">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 联系方式： </label>
+	
+				<div class="col-sm-9">
+					<input type="text" name="contact_way" id="form-field-2" placeholder="输入联系方式" class="col-xs-10 col-sm-6">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 商户图片： </label>
+	
+				<div class="col-sm-9" id="tx-1">
+					
+				   <link rel="stylesheet" type="text/css" href="/Public/plugins/webuploader/webuploader.css" />
+<link rel="stylesheet" type="text/css" href="/Public/plugins/webuploader/image-upload/style.css" />
+<div id="wrapper">
+    <div id="container">
+        <!--头部，相册选择和格式选择-->
+
+        <div id="uploader">
+            <div class="queueList">
+                <div id="dndArea" class="placeholder">
+                    <div id="filePicker"></div>
+                    <p>或将照片拖到这里，单次最多可选300张</p>
+                </div>
+            </div>
+            <div class="statusBar" style="display:none;">
+                <div class="progress">
+                    <span class="text">0%</span>
+                    <span class="percentage"></span>
+                </div><div class="info"></div>
+                <div class="btns">
+                    <div id="filePicker2"></div><div class="uploadBtn">开始上传</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/Public/plugins/webuploader/image-upload/jquery.js"></script>
+<script type="text/javascript" src="/Public/plugins/webuploader/webuploader.js"></script>
+<script type="text/javascript" src="/Public/plugins/webuploader/image-upload/upload.js"></script>
+
 				</div>
 			</div>
 		</div>
+		
+		<div tag-id="setup-2" class="hide">
+			<div class="form-group">
+				<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 商户地址：</label>
+				<div class="col-sm-9">
+					<div class="city-component" default-province="440000" default-city="440300" default-region="440304"></div>
+					<input type="text" name="address" placeholder="详细地址" class="col-xs-10 col-sm-12 address" >
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 商圈： </label>
+	
+				<div class="col-sm-9">
+					<select name="trade_id" url="<?php echo U('Public/getCity');?>" class="form-control area _city _region">
+						<option value="0">--请选择--</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 广告位和数量：</label>
+	
+				<div class="col-sm-9 adv">
+					<div>*首页广告位 </div>
+					<div style="text-align:right;padding-right:10px;width:10%;">数量</div>
+					<div><input type="text" name="adver_number" placeholder="最大数量为 6" class="col-xs-10" style="float:none;width:100%;"></div>
+				</div>
+			</div>
+			
+			<div class="widget-box transparent hotel-intef">
+				<div class="widget-header widget-header-flat">
+					<h4 class="lighter">
+						<i class="icon-signal"></i>
+						接口信息
+					</h4>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 酒店编码： </label>
+	
+				<div class="col-sm-9">
+					<input type="text" name="hotel_code" placeholder="酒店编码系统唯一不能重复；如：10001" class="col-xs-10 col-sm-10">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 客户集团编码： </label>
+	
+				<div class="col-sm-9">
+					<input type="text" name="group_code" placeholder="客户集团编码系统唯一不能重复；如：20001" class="col-xs-10 col-sm-10">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 客户酒店编码： </label>
+	
+				<div class="col-sm-9">
+					<input type="text" name="customer_code" placeholder="客户酒店编码系统唯一不能重复；如：30001" class="col-xs-10 col-sm-10">
+				</div>
+			</div>
+			
+			
+		</div>
 	</form>
 </div>
+
 
 <!-- 编辑面板 -->
-<div dialog-id="editFloor" class="hide">
-	<form class="form-horizontal" role="form" form-id="add" action="<?php echo U('Shop/add');?>" method="post">
-		<div tag-id="setup-1">
-			<div class="form-group">
-				<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 商户名称：<span class="must">*</span></label>
-				<div class="col-sm-9">
-					<input type="text" name="hotel_name" disabled="disabled" placeholder="商户名称" class="col-xs-10 col-sm-9" >
-					<a href="javascript:void(0);" event-name="openSeach"><i class="icon-search hotet-sea-btn"></i></a>
-				</div>
-			</div>
-			<div class="form-group">
-				<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 楼层信息：<span class="must">*</span></label>
-				<div class="col-sm-9 floor-info">
-					<div class="row-td td-tit"><span>楼层名称</span></div>
-					<div class="row-td">
-						<div class="col-sm-9">
-							<input type="text" name="hotel_name" placeholder="输入楼层名称" class="col-xs-10 col-sm-3" >
-						</div>
-					</div>
-					<div class="row-td td-tit"><span>房间数量 </span></div>
-					<div class="row-td" style="width:15%;">
-						<div class="col-sm-9">
-							<input type="text" name="hotel_name" placeholder="输入数量" class="col-xs-10 col-sm-2" >
-						</div>
-					</div>
-					<div class="row-td td-last"><span>间 </span></div>
-					<div class="item-list">
-						<ul tag-id="floor-item">
-							
-						</ul>
-					</div>
-					<a event-name="addFloorItem" href="javascript:void(0);" class="add-floor-btn">
-						<i class="icon-plus-sign"></i> 添加楼层
-					</a>
-				</div>
-			</div>
-		</div>
-	</form>
-</div>
-
-<!-- 搜索商户 -->
-<div dialog-id="seachShop" class="hide">
-	<div tag-id="setup-1">
-		<div class="form-group">
-			<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 商户名称：</label>
-			<div class="col-sm-9">
-				<input type="text" name="hotel_name" placeholder="支持模糊搜索" class="col-xs-10 col-sm-9" >
-				
-				<button event-name="seachShop" class="btn btn-purple btn-sm">
-					搜索
-					<i class="icon-search icon-on-right bigger-110"></i>
-				</button>
-			</div>
-		</div>
-		<div class="form-group" style="padding-top:55px;">
-			<table class="table table-striped table-bordered table-hover">
-				<thead>
-					<tr class="tr-center">
-						<th colspan="2">商户名称</th>
-						<th>商户类型</th>
-					</tr>
-				</thead>
-
-				<tbody>
-				
-						<tr>
-							<td class="center">
-								<input name="hetel" type="radio" value="1" />
-							</td>
-							<td>维也纳酒店</td>
-							<td>商务酒店；三星级酒店</td>
-						</tr>
-						
-						<tr>
-							<td class="center">
-								<input name="hetel" type="radio" value="1" />
-							</td>
-							<td>尚美酒店XX分店</td>
-							<td>商务酒店</td>
-						</tr>
-					
-				</tbody>
-			</table>
-		</div>
-	</div>
+<div dialog-id="edit" class="hide">
+	<h3>编辑内容</h3>
 </div>
 
 <!-- 查看面板 -->
-<div dialog-id="viewFloor" class="hide">
-	<div tag-id="setup-1">
-		<div class="form-group floor-view">
-			<div class="head-left">
-				<span>商户名称：尚美水晶酒店</span>
+<div dialog-id="view" class="hide">
+	<div class="base-info">
+		<h3>商户信息</h3>
+		<div class="info-row">
+			<div class="base-left">
+				<span class="profile-picture">
+					<img id="avatar" class="editable img-responsive editable-click editable-empty" src="/Public/plugins/assets/avatars/profile-pic.jpg"></img>
+				</span>
+				<div class="width-80 label label-info label-xlg arrowed-in arrowed-in-right img-tit">
+					<div class="inline position-relative">
+						<span class="white">商户ID：00156</span>
+					</div>
+				</div>
 			</div>
-			<div class="head-right">
-				<span>商户ID：00156</span>
+			
+			<div class="base-right">
+				<ul>
+					<li>商户名称：尚美水晶酒店</li>
+					<li>商户类型：商户型酒店；假日酒店；三星级酒店</li>
+					<li>商户地址：广东省深圳市南山区高新科技园XXXXXX</li>
+					<li>所属商圈：科技园</li>
+				</ul>
 			</div>
 		</div>
-		<div class="form-group" style="padding-top:30px;">
-			<table class="table table-striped table-bordered table-hover">
-				<thead>
-					<tr class="tr-center">
-						<th>楼层名称</th>
-						<th>房间数</th>
-					</tr>
-				</thead>
-
-				<tbody>
-						<tr>
-							<td>3楼</td>
-							<td>60</td>
-						</tr>
-						
-						<tr>
-							<td>13楼</td>
-							<td>23</td>
-						</tr>
-						<tr>
-							<td>13楼</td>
-							<td>23</td>
-						</tr>
-						<tr>
-							<td>13楼</td>
-							<td>23</td>
-						</tr>
-						<tr>
-							<td>13楼</td>
-							<td>23</td>
-						</tr>
-						<tr>
-							<td>13楼</td>
-							<td>23</td>
-						</tr>
-						<tr>
-							<td>13楼</td>
-							<td>23</td>
-						</tr>
-				</tbody>
-			</table>
+	</div>
+	
+	<div class="author-info">
+		<div class="base-info">
+			<h3>联系人信息</h3>
+			<div class="info-row">
+				<div class="base-right">
+					<ul>
+						<li>联系人：王先生</li>
+						<li>联系电话：186XXXX6699</li>
+					</ul>
+				</div>
+			</div>
 		</div>
-		<div class="form-group floor-view">
-			<div class="head-right">
-				<span>总计：101 间</span>
+		
+		<div class="base-info">
+			<h3>商家广告位</h3>
+			<div class="info-row">
+				<div class="base-right">
+					<ul class="adv-info">
+						<li class="adv-title">
+							<span class="adv-name">广告位名称</span>
+							<span class="adv-num">广告位数量</span>
+						</li>
+						<li class="adv-item">
+							<span class="adv-name">首页广告位</span>
+							<span class="adv-num">2 个</span>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-
-
+<!-- 选择类型 -->
+<div dialog-id="type" class="hide">
+	<div class="type-select" tag-id="type-items">
+		
+	</div>
+</div>
 
 
 
